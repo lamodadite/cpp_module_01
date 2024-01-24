@@ -1,5 +1,6 @@
-NAME = ex01
-SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+NAME = ex03
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+INCS_DIR = incs
 OBJ_DIR = objs
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CPP = c++
@@ -12,7 +13,7 @@ $(NAME) : $(OBJS)
 
 $(OBJ_DIR)/%.o : %.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CPP) $(CPPFLAGS) -c -o $@ $<
+	@$(CPP) $(CPPFLAGS) -c -o $@ $< -I $(INCS_DIR)
 
 clean :
 	rm -rf $(OBJ_DIR)

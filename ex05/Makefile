@@ -1,5 +1,5 @@
-NAME = ex01
-SRCS = main.cpp Zombie.cpp zombieHorde.cpp
+NAME = ex05
+SRCS = main.cpp Harl.cpp
 OBJ_DIR = objs
 OBJS = $(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CPP = c++
