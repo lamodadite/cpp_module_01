@@ -12,7 +12,7 @@ $(NAME) : $(OBJS)
 
 $(OBJ_DIR)/%.o : %.cpp
 	@mkdir -p $(OBJ_DIR)
-	@$(CPP) $(CPPFLAGS) -c -o $@ $< -I
+	@$(CPP) $(CPPFLAGS) -c -o $@ $<
 
 clean :
 	rm -rf $(OBJ_DIR)
